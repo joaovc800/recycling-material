@@ -1,1 +1,1 @@
-web: gunicorn recycling-material.wsgi:application --log-file -
+web: gunicorn recycling-material.wsgi
