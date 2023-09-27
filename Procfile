@@ -1,2 +1,1 @@
-web: gunicorn gettingstarted.wsgi
-web: python manage.py runserver %PORT%
+web: gunicorn recycling-material.wsgi:application --log-file -
