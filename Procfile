@@ -1,2 +1,1 @@
-web: gunicorn recycling-material.wsgi
-web: python index.html --port %PORT%
+web: gunicorn recyclingmaterial.wsgi:apllication --log-file -
