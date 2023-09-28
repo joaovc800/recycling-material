@@ -1,6 +1,12 @@
+
+import routes from './routes.js'
+
 const cep = document.getElementById('cep')
+const form = document.getElementById('form-register')
 
 cep.addEventListener('blur', async function(){
+    if(this.value == '') return
+
     const cep = this.value
     const url = `https://viacep.com.br/ws/${cep}/json/`
 
@@ -29,4 +35,35 @@ cep.addEventListener('blur', async function(){
             input.value = value
         }
     }
+})
+
+form.addEventListener('submit', async function(e){
+    e.preventDefault()
+
+    console.log(this)
+    const config = {
+        method: 'POST',
+        body: JSON.stringify(
+            {
+                "name": "joao",
+                "cep": "123",
+                "state": "s",
+                "city": "s",
+                "neighborhood": "s",
+                "publicplace": "s",
+                "number": 1,
+                "complement": "s",
+                "schedule": "2021-02-01"
+            }
+        ),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }
+
+    const request = await fetch(routes.register, config)
+    const response = await request.json()
+
+    console.log(response);
 })
