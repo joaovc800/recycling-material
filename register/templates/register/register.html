@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} Cadastrar material {% endblock %}
+
+{% block content %}
+    
+    <form class="row" id="form-register">
+        <div class="col-12 py-2">
+            <label for="name" role="button" class="mb-1">Nome completo</label>
+            <input required id="name" type="text" class="form-control form-control-lg" placeholder="Nome completo">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="cep" role="button" class="mb-1">Cep</label>
+            <input required id="cep" type="text" class="form-control form-control-lg" placeholder="Cep">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="state" role="button" class="mb-1">Estado</label>
+            <input required id="state" type="text" class="form-control form-control-lg" placeholder="Estado">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="city" role="button" class="mb-1">Cidade</label>
+            <input required id="city" type="text" class="form-control form-control-lg" placeholder="Cidade">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="neighborhood" role="button" class="mb-1">Bairro</label>
+            <input required id="neighborhood" type="text" class="form-control form-control-lg" placeholder="Bairro">
+        </div>
+        <div class="col-12 py-2">
+            <label for="public-place" role="button" class="mb-1">Logradouro</label>
+            <input required id="public-place" type="text" class="form-control form-control-lg" placeholder="Logradouro">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="number" role="button" class="mb-1">Número</label>
+            <input required id="number" type="text" class="form-control form-control-lg" placeholder="Número">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 py-2">
+            <label for="complement" role="button" class="mb-1">Complemento (opcional)</label>
+            <input id="complement" type="text" class="form-control form-control-lg" placeholder="Complemento">
+        </div>
+        <div class="col-12 py-2">
+            <button class="btn btn-lg btn-primary" id="button-submit">Enviar</button>
+        </div>
+
+    </form>
+    
+{% endblock %}
